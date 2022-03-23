@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui"
+      lang="pt-br">
+<h:head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <ui:insert name="head-template">
+        <title>Colaborativa_02</title>
+    </ui:insert>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <h:outputStylesheet library="css" name="materialize.css" />
+    <h:outputStylesheet library="css" name="style.css" />
+</h:head>
+
+<h:body>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container">
+                        <p:megaMenu orientation="horizontal" autoDisplay="false" class="light-blue lighten-1" style="border: none">
+                            <p:submenu label="Menu">
+                                <p:column>
+                                    <p:submenu label="">
+                                        <p:menuitem value="Produtos disponíveis" outcome="/Compra/comprar"/>
+                                        <p:menuitem value="Carrinho de Compra" outcome="/Compra/carrinhoCompras"/>
+                                        <p:menuitem value="Todos os clientes" outcome="/Cliente/list"/>
+                                        <p:menuitem value="Cadastrar cliente" outcome="/Cliente/edit"/>
+                                        <p:menuitem value="Buscar por cpf" outcome="/Cliente/search"/>
+                                        <p:menuitem value="Todos os produtos" outcome="/Produto/list"/>
+                                        <p:menuitem value="Cadastrar produto" outcome="/Produto/edit"/>
+                                        <p:menuitem value="Buscar produto" outcome="/Produto/search"/>
+                                    </p:submenu>
+                                </p:column>
+                            </p:submenu>
+
+                        </p:megaMenu>
+        </div>
+    </nav>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.js"></script>
+    <script src="js/init.js"></script>
+</h:body>
+</html>
